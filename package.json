@@ -31,7 +31,8 @@
     "mime-types": "^2.1.34",
     "node-machine-id": "^1.1.12",
     "systeminformation": "^5.11.6",
-    "simple-thumbnail": "^1.6.5"
+    "simple-thumbnail": "^1.6.5",
+    "video-length": "^2.0.6"
   },
   "bin": {
     "immich": "./bin/index.js"

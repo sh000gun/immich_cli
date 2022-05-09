@@ -10,8 +10,8 @@ var path = require("path");
 var FormData = require("form-data");
 const cliProgress = require("cli-progress");
 const { stat } = require("fs/promises");
-const { getVideoDurationInSeconds } = require("get-video-duration");
 const genThumbnail = require('simple-thumbnail');
+const VideoLength = require('video-length');
 const os = require("os");
 
 
@@ -180,9 +180,13 @@ async function startUpload(endpoint, accessToken, asset, deviceId) {
     const fileStat = await stat(asset.filePath);
     let videoDuration = 0;
     if (assetType == "VIDEO") {
-      videoDuration = await getVideoDurationInSeconds(
-        fs.createReadStream(asset.filePath)
-      );
+      await VideoLength(asset.filePath, { bin: 'mediainfo' })
+              .then(len => {
+                videoDuration = len;
+              })
+      .catch(err => {
+        console.log(err);
+      });
     }
 
     const tempDir = os.tmpdir();
