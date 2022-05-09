@@ -1,6 +1,6 @@
 # IMMICH CLI
 
-CLI utilities to help with some operations with the Immich app
+CLI utilities to help with some operations with the Immich app. Please make sure that mediainfo (https://mediaarea.net/en/MediaInfo/Download) installed and worked on your system.
 
 # Features
 
