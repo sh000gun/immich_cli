@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/alextran1502/immich_cli#readme",
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "chalk": "^2.4.1",
     "cli-progress": "^3.10.0",
     "commander": "^9.0.0",
@@ -30,8 +30,8 @@
     "get-video-duration": "^4.0.0",
     "mime-types": "^2.1.34",
     "node-machine-id": "^1.1.12",
-    "systeminformation": "^5.11.6",
     "simple-thumbnail": "^1.6.5",
+    "systeminformation": "^5.11.6",
     "video-length": "^2.0.6"
   },
   "bin": {
